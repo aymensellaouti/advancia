@@ -5,8 +5,10 @@
   ngclass works!
 </p>
 
-<p appHighlight [colorIn]="'lightblue'" [colorOut]="'green'">
+<p *ngIf="affiche" appHighlight [colorIn]="'lightblue'" [colorOut]="'green'">
   Directive
 </p>
+
+<button (click)="affiche=!affiche"></button>
 
 <input appRainbow type="text" class="form-control">

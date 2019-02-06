@@ -26,6 +26,14 @@ export class ListComponent implements OnInit {
         'Informaticien',
         26,
         'skan.jpg'
+      ),
+      new Personne(
+        2,
+        'skander',
+        'Sellaouti',
+        'Informaticien',
+        26,
+        'skan.jpg'
       )
     ];
   }

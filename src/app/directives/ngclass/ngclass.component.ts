@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgclassComponent implements OnInit {
   est = true;
   ca = false;
+  affiche = true;
   constructor() { }
 
   ngOnInit() {
