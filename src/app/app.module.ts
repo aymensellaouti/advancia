@@ -10,6 +10,10 @@ import { CvComponent } from './cvTech/cv/cv.component';
 import { ListComponent } from './cvTech/list/list.component';
 import { ItemComponent } from './cvTech/item/item.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { NgclassComponent } from './directives/ngclass/ngclass.component';
+import { HighlightDirective } from './highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { DetailComponent } from './cvTech/detail/detail.component';
     CvComponent,
     ListComponent,
     ItemComponent,
-    DetailComponent
+    DetailComponent,
+    NgStyleComponent,
+    NgclassComponent,
+    HighlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,
