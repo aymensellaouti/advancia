@@ -14,6 +14,7 @@ import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { NgclassComponent } from './directives/ngclass/ngclass.component';
 import { HighlightDirective } from './highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
     NgStyleComponent,
     NgclassComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
