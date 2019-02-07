@@ -18,6 +18,7 @@ import { TodoComponent } from './todo/todo.component';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import {APP_ROUTING} from './app.routing';
 import { HeaderComponent } from './header/header.component';
+import { DetailCvComponent } from './detail-cv/detail-cv.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HeaderComponent } from './header/header.component';
     RainbowDirective,
     TodoComponent,
     EmbaucheComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailCvComponent
   ],
   imports: [
     BrowserModule,

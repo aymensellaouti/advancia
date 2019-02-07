@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-couleur',
@@ -8,9 +9,14 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class CouleurComponent implements OnInit {
   @Input() couleur = 'red';
   @Output() sendDataToFils = new EventEmitter();
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private activatedRoute: ActivatedRoute) { }
+    ngOnInit() {
+    this.activatedRoute.params.subscribe(
+      (mesParametres) => {
+        this.couleur = mesParametres['couleur'];
+        console.log(mesParametres['param']);
+      }
+    );
   }
   changeColor(maCouleur) {
     this.couleur = maCouleur;
