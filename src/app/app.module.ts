@@ -15,6 +15,9 @@ import { NgclassComponent } from './directives/ngclass/ngclass.component';
 import { HighlightDirective } from './highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { TodoComponent } from './todo/todo.component';
+import { EmbaucheComponent } from './embauche/embauche.component';
+import {APP_ROUTING} from './app.routing';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +34,14 @@ import { TodoComponent } from './todo/todo.component';
     NgclassComponent,
     HighlightDirective,
     RainbowDirective,
-    TodoComponent
+    TodoComponent,
+    EmbaucheComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]

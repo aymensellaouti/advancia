@@ -5,5 +5,10 @@
   <div class="col-md-6">
     <app-detail *ngIf="selectedPersonne" [personne]="selectedPersonne"></app-detail>
   </div>
-
+  <div *ngIf="embaucheeService.estEmbauchee" class="alert alert-danger">
+    Vous avez déjà embaucher cette personne
+  </div>
+</div>
+<div class="row">
+  <app-embauche></app-embauche>
 </div>

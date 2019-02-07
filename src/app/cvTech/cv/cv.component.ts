@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from '../../Model/Personne';
 import {FirstService} from '../../first.service';
+import {EmbaucheService} from '../../embauche.service';
 
 @Component({
   selector: 'app-cv',
@@ -10,11 +11,9 @@ import {FirstService} from '../../first.service';
 export class CvComponent implements OnInit {
 
   selectedPersonne: Personne;
-  constructor(private firstService: FirstService) { }
+  constructor(public embaucheeService: EmbaucheService) { }
 
-  ngOnInit() {
-    this.firstService.sayHello();
-  }
+  ngOnInit() {}
 
   getPersonne(personne: Personne) {
     this.selectedPersonne = personne;
