@@ -21,6 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './detail-cv/detail-cv.component';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 import { LoginComponent } from './login/login.component';
+import { ObervComponent } from './oberv/oberv.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,11 +44,13 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     DetailCvComponent,
     AddPersonneComponent,
-    LoginComponent
+    LoginComponent,
+    ObervComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [],

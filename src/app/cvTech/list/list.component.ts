@@ -12,7 +12,16 @@ export class ListComponent implements OnInit {
   @Output() trasferPersonne = new EventEmitter();
   constructor(private cvService: CvService) {}
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+        (personnes) => {
+          this.personnes = personnes;
+          console.log()
+          return this.personnes;
+        },
+        (error) => {
+          alert('problème veuillez contacter l\'admin');
+        }
+    );
   }
   getPersonne(personne: Personne) {
     console.log('liste a récupéré la personne :', personne);

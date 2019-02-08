@@ -1,42 +1,17 @@
 import { Injectable } from '@angular/core';
 import {Personne} from './Model/Personne';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CvService {
   personnes: Personne [];
-
-  constructor() {
-    this.personnes = [
-      new Personne(
-        1,
-        'aymen',
-        'sellaouti',
-        'prof',
-        36,
-        'as.jpg'
-      ),
-      new Personne(
-        2,
-        'skander',
-        'Sellaouti',
-        'Informaticien',
-        26,
-        'skan.jpg'
-      ),
-      new Personne(
-        3,
-        'skander',
-        'Sellaouti',
-        'Informaticien',
-        26,
-        'skan.jpg'
-      )
-    ];
+  apiLink = 'http://localhost:3000/api/personnes';
+  constructor(private http: HttpClient) {
   }
   getPersonnes() {
-    return this.personnes;
+    return this.http.get <Personne []>(this.apiLink);
   }
   findPersonneById(id): Personne {
     const personne = this.personnes.find(pers => {
