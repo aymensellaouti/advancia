@@ -1,0 +1,10 @@
+<form #formulaire="ngForm">
+  <label for="mail">E-mail</label>
+  <input required type="email" id="mail" name="mail" ngModel email class="form-control">
+  <label for="pwd">Password</label>
+  <input required #pwd="ngModel" type="password" id="pwd" name="pwd" class="form-control" ngModel>
+  <div class="alert alert-danger" *ngIf="!pwd.valid && pwd.touched">
+    Veuillez saisir un password
+  </div>
+  <button [disabled]="!formulaire.valid" class="btn btn-dark" (click)="login(formulaire)">Ajouter</button>
+</form>

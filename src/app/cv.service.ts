@@ -44,5 +44,10 @@ export class CvService {
     });
     return personne;
   }
+  addPersonne(personne: Personne) {
+    const lastId = this.personnes.length - 1;
+    personne.id = this.personnes[lastId].id + 1;
+    this.personnes.push(personne);
+  }
 }
 

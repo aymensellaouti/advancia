@@ -11,6 +11,12 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['todos']" routerLinkActive="active">Todo</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['cv/add']" routerLinkActive="active">Add Cv</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['login']" routerLinkActive="active">Login Cv</a>
+      </li>
       <li>
         <select #compo (change)="naviguerToCouleur(compo.value)" class="form-control">
           <option value="">Cv</option>

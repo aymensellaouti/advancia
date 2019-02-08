@@ -19,6 +19,8 @@ import { EmbaucheComponent } from './embauche/embauche.component';
 import {APP_ROUTING} from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { DetailCvComponent } from './detail-cv/detail-cv.component';
+import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DetailCvComponent } from './detail-cv/detail-cv.component';
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    AddPersonneComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
