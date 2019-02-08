@@ -19,8 +19,16 @@ export class AddPersonneComponent implements OnInit {
   }
   addPersonne(formulaire: NgForm) {
     console.log(formulaire.value);
-    this.cvService.addPersonne(formulaire.value);
-    this.router.navigate(['']);
+    this.cvService.addPersonne(formulaire.value).subscribe(
+      (success) => {
+        this.router.navigate(['']);
+      },
+      (erreur) => {
+        console.log(erreur);
+        alert('Problème access Api');
+      }
+    );
+
   }
 
 }

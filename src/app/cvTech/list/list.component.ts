@@ -15,7 +15,6 @@ export class ListComponent implements OnInit {
     this.cvService.getPersonnes().subscribe(
         (personnes) => {
           this.personnes = personnes;
-          console.log()
           return this.personnes;
         },
         (error) => {

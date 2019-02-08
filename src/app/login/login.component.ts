@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import {AuthentificationService} from '../authentification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +10,27 @@ import {NgForm} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authenticationService: AuthentificationService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
   login(formulaire: NgForm) {
-    console.log(formulaire);
-    alert('you are logged in :D');
+    const credentials = {
+         "email": formulaire.value.mail,
+         "password": formulaire.value.pwd
+       };
+    this.authenticationService.login(credentials).subscribe(
+      (response) => {
+        localStorage.setItem('token', response.id);
+        this.router.navigate(['']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

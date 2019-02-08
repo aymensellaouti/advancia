@@ -23,6 +23,7 @@ import { AddPersonneComponent } from './cvTech/add-personne/add-personne.compone
 import { LoginComponent } from './login/login.component';
 import { ObervComponent } from './oberv/oberv.component';
 import {HttpClientModule} from '@angular/common/http';
+import {AuthentificationGuard} from './Guards/authentificationGuard';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [AuthentificationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
